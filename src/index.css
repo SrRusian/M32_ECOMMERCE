@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"); /* For a more rustic feel */
+
+:root {
+  --background: 28 30% 95%; /* Light wood/cream */
+  --foreground: 220 14% 18%; /* Dark text */
+  --card: 30 30% 98%; /* Lighter card background */
+  --card-foreground: 220 14% 18%;
+  --popover: 30 30% 98%;
+  --popover-foreground: 220 14% 18%;
+  --primary: 29 60% 45%; /* Earthy brown/orange */
+  --primary-foreground: 30 30% 98%;
+  --secondary: 100 20% 70%; /* Muted green */
+  --secondary-foreground: 220 14% 18%;
+  --muted: 40 20% 85%; /* Muted lighter brown */
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 40 20% 85%;
+  --accent-foreground: 220 14% 18%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 30 30% 98%;
+  --border: 30 10% 70%; /* Soft border color */
+  --input: 30 10% 70%;
+  --ring: 29 60% 45%;
+  --radius: 0.5rem;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  @apply bg-gradient-to-br from-stone-100 via-amber-50 to-orange-50 text-stone-800;
+  min-height: 100vh;
+}
+
+.glass-effect {
+  @apply backdrop-blur-md bg-white/40 border border-white/50; /* Slightly more opaque glass */
+}
+
+.molino32-gradient {
+  background: linear-gradient(
+    135deg,
+    #a0522d 0%,
+    #d2691e 25%,
+    #f4a460 50%,
+    #8b4513 75%,
+    #5a2e0a 100%
+  ); /* Earthy, woody gradient */
+}
+
+.chef-shadow {
+  box-shadow: 0 25px 50px -12px rgba(160, 82, 45, 0.25); /* Shadow matching new primary */
+}
+
+.course-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.course-card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 20px rgba(160, 82, 45, 0.4);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(160, 82, 45, 0.8);
+  }
+}
