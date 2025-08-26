@@ -1,0 +1,121 @@
+#navbar {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 250, 240, 0.85) 60%,
+    rgba(255, 250, 240, 0.95) 100%
+  );
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  box-shadow: 0 2px 24px rgba(160, 90, 28, 0.1);
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 30px;
+}
+
+/* Logo container */
+.navbar-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+.navbar-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #92400e;
+  line-height: 1;
+}
+.navbar-subtitle {
+  font-size: 14px;
+  color: rgb(87, 83, 78);
+  margin-top: 2px;
+  line-height: 1.1;
+}
+.navbar-logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+/* Gradient circle for the logo */
+.molino32-gradient {
+  background: linear-gradient(
+    135deg,
+    #a0522d 0%,
+    #d2691e 25%,
+    #f4a460 50%,
+    #8b4513 75%,
+    #5a2e0a 100%
+  );
+  border-radius: 9999px;
+  height: 3rem;
+  width: 3rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* Sections Navigation */
+.navbar-menu {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 2px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+.navbar-menu li a.active,
+.navbar-menu li a:hover {
+  color: #a05a1c;
+  border-bottom: 2px solid #a05a1c;
+}
+.navbar-menu li a i {
+  font-size: 18px;
+}
+
+/* Search Container */
+.navbar-search-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  padding: 4px 16px;
+  box-shadow: 0 2px 8px rgba(160, 90, 28, 0.07);
+  margin-right: 8px;
+  backdrop-filter: blur(8px);
+}
+.navbar-search-container i {
+  color: #a05a1c;
+  font-size: 18px;
+  margin-right: 8px;
+}
+.navbar-search {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: #222;
+  padding: 6px 0;
+  width: 160px;
+}
