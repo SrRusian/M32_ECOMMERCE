@@ -1,10 +1,9 @@
 #navbar {
   background: transparent;
   position: sticky;
-  width: 100%;
   top: 0;
   z-index: 50;
-  border-width: 1px;
+  border-width: 2px;
   border-color: #ffffff80;
   background-color: #fff6;
   backdrop-filter: blur(12px);
@@ -14,7 +13,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 30px;
+  padding: 1rem 4rem 1rem 4rem;
+  max-width: 1350px;
 }
 
 /* Logo container */
@@ -82,7 +82,10 @@
 }
 .navbar-menu li a.active,
 .navbar-menu li a:hover {
-  color: rgb(146, 64, 14);
+  color: #a05a1c;
+  border-radius: 4px 4px 0 0;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, border-bottom 0.2s;
 }
 .navbar-menu li a i {
   font-size: 24px;
@@ -94,22 +97,22 @@
 }
 /* Search Container */
 .navbar-search-container {
-  padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.3); /* translúcido */
-  border: 1px solid rgba(0, 0, 0, 0.06); /* ← sutil gris solo visible en fondo claro */
+  padding-right: 5rem;
+  padding-left: 0.6rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 9999px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
-  max-width: 300px;
   transition: all 0.3s ease;
 }
 
 .navbar-search-container i {
   color: rgba(0, 0, 0, 0.5);
   font-size: 18px;
-  margin-right: 8px;
+  margin-right: 15px;
 }
 
 .navbar-search {
@@ -127,10 +130,14 @@
 }
 .bx {
   color: #333;
-  padding-top: 0.8rem;
+  padding-top: 0.4rem;
   font-size: 24px;
+  border-bottom: 2px solid transparent;
   transition: color 0.2s, border-bottom 0.2s;
 }
 .bx:hover {
-  color: rgb(146, 64, 14);
+  color: #a05a1c;
+  border-radius: 4px 4px 0 0;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, border-bottom 0.2s;
 }
