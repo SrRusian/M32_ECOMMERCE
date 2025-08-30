@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOLINO32</title>
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    style="
+      background: radial-gradient(circle at 60% 40%, #f9f6f1 60%, #f7e7d2 100%);
+      min-height: 100vh;
+    "
+  >
+    <nav id="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <div class="molino32-gradient">
+            <!-- Logo SVG aquí -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="#ffffff"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m17.13,5.54c-.8-2.12-2.81-3.54-5.13-3.54s-4.33,1.42-5.13,3.54c-2.74.31-4.87,2.65-4.87,5.46,0,2.07,1.18,3.95,3,4.88v2.12c0,.55.45,1,1,1h12c.55,0,1-.45,1-1v-2.12c1.82-.93,3-2.81,3-4.88,0-2.82-2.13-5.15-4.87-5.46Zm.53,8.75c-.4.14-.67.52-.67.94v1.78H7v-1.78c0-.42-.27-.8-.67-.94-1.4-.5-2.33-1.82-2.33-3.28,0-1.93,1.57-3.5,3.42-3.5.04,0,.14.01.18.02.49,0,.9-.31,1-.78.36-1.61,1.76-2.73,3.41-2.73s3.05,1.12,3.41,2.73c.1.47.51.81,1,.78.06,0,.12,0,.09-.01,1.93,0,3.5,1.57,3.5,3.5,0,1.47-.94,2.79-2.33,3.28Z"
+              ></path>
+              <path d="M5 20H19V22H5z"></path>
+            </svg>
+          </div>
+          <div class="navbar-logo-text">
+            <span class="navbar-title">Molino32</span>
+            <span class="navbar-subtitle">Aprende a Hornear y Cocinar</span>
+          </div>
+        </div>
+        <ul class="navbar-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="courses.html">Cursos</a></li>
+          <li><a href="#">Sobre Mi</a></li>
+        </ul>
+        <div class="navbar-icons">
+          <div class="navbar-search-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              class="navbar-search"
+              placeholder="Buscar cursos..."
+            />
+          </div>
+          <div>
+            <a href="cart.html" class="active"><i class="bx bx-cart"></i></a>
+          </div>
+          <div>
+            <a href="account.html"><i class="bx bx-user"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="cart-empty-section">
+        <h1 class="cart-title">Tu Carrito</h1>
+        <p class="cart-subtitle">Tu carrito está vacío</p>
+        <div class="cart-empty-box">
+          <i class="fa-solid fa-cart-shopping cart-empty-icon"></i>
+          <h2 class="cart-empty-title">Tu carrito está vacío</h2>
+          <p class="cart-empty-desc">
+            ¡Explora nuestros cursos y comienza tu aventura culinaria!
+          </p>
+          <a href="courses.html" class="cart-explore-btn">Explorar Cursos</a>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const loginTab = document.getElementById('login-tab');
+    const registerTab = document.getElementById('register-tab');
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    function showLogin() {
+      registerForm.classList.remove('active');
+      loginForm.classList.add('active');
+      loginTab.classList.add('active');
+      registerTab.classList.remove('active');
+    }
+
+    function showRegister() {
+      loginForm.classList.remove('active');
+      registerForm.classList.add('active');
+      registerTab.classList.add('active');
+      loginTab.classList.remove('active');
+    }
+
+    loginTab.addEventListener('click', showLogin);
+    registerTab.addEventListener('click', showRegister);
+  });
+</script>
+</html>

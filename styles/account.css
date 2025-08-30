@@ -1,0 +1,163 @@
+body {
+  background: radial-gradient(circle at 60% 40%, #f9f6f1 60%, #f7e7d2 100%);
+  min-height: 100vh;
+  height: 105vh;
+  padding-bottom: 10vh;
+}
+
+.account-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+.tab-btn {
+  background: #f7f7fa;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #a05a1c;
+  padding: 12px 48px;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab-btn.active {
+  background: #fff;
+  color: #222;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(160, 90, 28, 0.07);
+}
+
+.account-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 60vh;
+}
+
+.account-form {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(160, 90, 28, 0.07);
+  padding: 40px 32px 32px 32px;
+  width: 100%;
+  max-width: 420px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: fadeOut 0.4s forwards;
+}
+
+.account-form.active {
+  display: flex;
+  animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+.account-logo {
+  background: linear-gradient(135deg, #a05a1c 60%, #d08c3b 100%);
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.account-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.account-desc {
+  font-size: 16px;
+  color: #a05a1c;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.account-form label {
+  align-self: flex-start;
+  font-size: 15px;
+  color: #a05a1c;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.account-form input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e0d6c7;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background: #faf8f5;
+  transition: border 0.2s;
+}
+
+.account-form input:focus {
+  border: 1.5px solid #a05a1c;
+  outline: none;
+}
+
+.captcha-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 0 0;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.captcha-container img {
+  width: 160px;
+  height: 48px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(160, 90, 28, 0.07);
+}
+
+.account-btn {
+  background: #a05a1c;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px 38px;
+  border-radius: 32px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(160, 90, 28, 0.08);
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.account-btn:hover {
+  background: #7c4314;
+}

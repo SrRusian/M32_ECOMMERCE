@@ -95,6 +95,13 @@
   display: flex;
   gap: 2rem;
 }
+.navbar-icons a.active,
+.navbar-icons a.active i {
+  color: #a05a1c !important;
+  border-radius: 4px 4px 0 0;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, border-bottom 0.2s;
+}
 /* Search Container */
 .navbar-search-container {
   padding-right: 5rem;

@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MOLINO32</title>
-    <link rel="stylesheet" href="styles/home.css" />
-    <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/features.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/courses.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -42,14 +41,14 @@
         </div>
         <ul class="navbar-menu">
           <li>
-            <a href="index.html" class="active"></i> Inicio</a
+            <a href="index.html"></i> Inicio</a
             >
           </li>
           <li>
-            <a href="courses.html">Cursos</a>
+            <a href="courses.html" class="active">Cursos</a>
           </li>
           <li>
-            <a href="">Sobre Mi</a>
+            <a href="#">Sobre Mi</a>
           </li>
         </ul>
         <div class="navbar-icons">
@@ -70,86 +69,32 @@
         </div>
       </div>
     </nav>
-
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1>
-          <span class="hero-title-main">Molino32</span><br />
-          <span class="hero-title-sub">Cursos de Cocina</span>
-        </h1>
-        <p>
-          Transforma tu pasión culinaria en arte con nuestros cursos de
-          cocina,<br />
-          guiado por chefs expertos y sabores auténticos.
-        </p>
-        <div class="hero-buttons">
-          <a href="courses.html" class="btn-main">
-            Explorar Cursos <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="#" class="btn-outline"> Ver Demo Gratis </a>
-        </div>
+    <section class="courses-section">
+      <h1>Todos los Cursos</h1>
+      <p>Descubre nuestra colección completa de cursos culinarios</p>
+      <div class="courses-filter">
+        <span>Filtrar por categoría:</span>
+        <button class="btn-main active">Todos los Cursos</button>
+        <button class="btn-outline">
+          <i class="fa-solid fa-utensils"></i> Cocina Italiana
+        </button>
+        <button class="btn-outline">
+          <i class="fa-solid fa-cake-candles"></i> Repostería
+        </button>
+        <button class="btn-outline">
+          <i class="fa-solid fa-pepper-hot"></i> Cocina Mexicana
+        </button>
+        <button class="btn-outline">
+          <i class="fa-solid fa-bowl-rice"></i> Cocina Asiática
+        </button>
+        <button class="btn-outline">
+          <i class="fa-solid fa-bread-slice"></i> Panadería
+        </button>
+        <button class="btn-outline">
+          <i class="fa-solid fa-leaf"></i> Cocina Vegana
+        </button>
       </div>
-
-      <div class="hero-image-container">
-        <img
-          src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80"
-          alt="Cocinando"
-          class="hero-image"
-        />
-        <div class="hero-badge">
-          <i class="fa-solid fa-user-group"></i>
-          <div>
-            <strong>12,000+</strong><br />
-            <span>Estudiantes Activos</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="why-section">
-      <h2>¿Por qué elegir Molino32?</h2>
-      <p>
-        Ofrecemos la experiencia de aprendizaje culinario más completa con
-        instructores de clase mundial
-      </p>
-      <div class="why-cards">
-        <div class="why-card">
-          <div class="why-icon">
-            <i class="fa-solid fa-user-chef"></i>
-          </div>
-          <h3>Chefs Profesionales</h3>
-          <p>
-            Aprende de chefs con experiencia en restaurantes de prestigio y
-            cocinas internacionales
-          </p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <i class="fa-solid fa-book-open"></i>
-          </div>
-          <h3>Contenido Interactivo</h3>
-          <p>
-            Videos HD, recetas descargables y ejercicios prácticos para dominar
-            cada técnica
-          </p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <i class="fa-solid fa-award"></i>
-          </div>
-          <h3>Certificación Oficial</h3>
-          <p>
-            Obtén certificados reconocidos que validen tus habilidades
-            culinarias
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="featured-section">
-      <h2>Cursos Destacados</h2>
-      <p>Los cursos más populares de nuestra plataforma</p>
-      <div class="featured-cards">
+      <div class="courses-cards">
         <!-- Card 1 -->
         <div class="featured-card">
           <div class="featured-card-img">
@@ -260,9 +205,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="featured-all">
-        <a href="courses.html" class="btn-outline">Ver Todos los Cursos</a>
       </div>
     </section>
   </body>
