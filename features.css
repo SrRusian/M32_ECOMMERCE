@@ -1,7 +1,9 @@
 .featured-section {
   background: #fcf7ea;
-  padding: 70px 0 90px 0;
+  padding-top: 0.1rem;
   text-align: center;
+  height: 85vh;
+  padding-bottom: 10vh;
 }
 
 .featured-section h2 {
@@ -118,26 +120,26 @@
 }
 
 .featured-card-body h3 {
-  font-size: 21px;
+  font-size: 20px;
   font-weight: bold;
   color: #222;
-  margin: 12px 0 4px 0;
+  margin-top: 10px;
   text-align: left;
 }
 
 .featured-chef {
-  font-size: 16px;
+  font-size: 15px;
   color: #7a6a53;
-  margin-bottom: 6px;
   text-align: left;
+  margin-top: 4px;
+  margin-bottom: 1px;
 }
 
 .featured-desc {
   font-size: 15px;
   color: #555;
-  margin-bottom: 14px;
+  margin-top: -1.5rem;
   text-align: left;
-  min-height: 48px;
 }
 
 .featured-info {
@@ -198,82 +200,4 @@
 .featured-all .btn-outline:hover {
   background: #a05a1c;
   color: #fff;
-}
-
-.courses-section {
-  background: #fcf7ea;
-  padding: 70px 0 90px 0;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.courses-section h1 {
-  font-size: 40px;
-  font-weight: bold;
-  color: #6b3a0a;
-  margin-bottom: 12px;
-}
-
-.courses-section p {
-  font-size: 22px;
-  color: #7a6a53;
-  margin-bottom: 32px;
-}
-
-.courses-filter {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 36px;
-  font-size: 17px;
-}
-
-.courses-filter span {
-  color: #7a6a53;
-  font-weight: 500;
-  margin-right: 8px;
-}
-
-.courses-filter .btn-main,
-.courses-filter .btn-outline {
-  padding: 10px 22px;
-  font-size: 16px;
-  border-radius: 24px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.courses-filter .btn-main {
-  background: #a05a1c;
-  color: #fff;
-  border: none;
-}
-
-.courses-filter .btn-main.active,
-.courses-filter .btn-main:active {
-  box-shadow: 0 2px 12px rgba(160, 90, 28, 0.08);
-}
-
-.courses-filter .btn-outline {
-  background: #fff;
-  color: #a05a1c;
-  border: 2px solid #a05a1c;
-}
-
-.courses-filter .btn-outline:hover {
-  background: #a05a1c;
-  color: #fff;
-}
-
-.courses-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: flex-start;
 }
