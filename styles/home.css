@@ -13,7 +13,6 @@
   height: 85vh;
   padding-bottom: 10vh;
 }
-
 .hero-content {
   max-width: 37.5rem;
   padding: 4rem 0 4rem 4rem;
@@ -21,36 +20,31 @@
   flex-direction: column;
   justify-content: center;
 }
-
 .hero-title-main {
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: 6rem;
   font-weight: bold;
-  color: #a05a1c;
+  color: #b28564;
   line-height: 1.1;
   margin-bottom: 0;
 }
-
 .hero-title-sub {
-  font-size: clamp(2.5rem, 4vw, 3.875rem);
+  font-size: 4rem;
   font-weight: 700;
-  color: #222;
+  color: #333;
   line-height: 1.1;
   margin-bottom: 0;
 }
-
 .hero-content p {
   margin: -0.1rem -5rem 3rem 0;
-  font-size: clamp(1.125rem, 1.8vw, 1.75rem);
+  font-size: 1.8rem;
   color: #555;
 }
-
 .hero-buttons {
   display: flex;
   gap: 1.75rem;
 }
-
 .btn-main {
-  background: rgb(161, 93, 29);
+  background: #b28564;
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 2.5rem;
@@ -63,41 +57,23 @@
   align-items: center;
   gap: 0.5rem;
 }
-
 .btn-main:hover {
-  background: #7c4314;
+  background: #816148;
 }
-
 .btn-outline {
-  background: #fff;
-  color: #a05a1c;
-  padding: 1rem 2.5rem;
+  background: #fdf4eda1;
+  color: #b28564;
+  padding: 1rem 1.5rem;
   border-radius: 2.5rem;
   font-size: 1.375rem;
   font-weight: 600;
   text-decoration: none;
-  border: 0.125rem solid #a05a1c;
+  border: 1px solid #b28564;
   transition: background 0.2s, color 0.2s;
 }
-
 .btn-outline:hover {
-  background: #a05a1c;
-  color: #fff;
-}
-
-@keyframes float {
-  0% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
-  }
-  50% {
-    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-    transform: translatey(-20px);
-  }
-  100% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
-  }
+  background: #fff;
+  color: #333;
 }
 
 /* IMAGE CONTAINER */
@@ -111,7 +87,6 @@
   min-width: 35rem;
   min-height: 26rem;
 }
-
 .hero-image {
   width: 40rem;
   height: 22rem;
@@ -121,6 +96,20 @@
   background: #eee;
   display: block;
   animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
 }
 
 /* BADGE */
@@ -143,7 +132,7 @@
 }
 .hero-badge strong {
   font-size: 1.25rem;
-  color: #222;
+  color: #333;
 }
 .hero-badge span {
   font-size: 1rem;
