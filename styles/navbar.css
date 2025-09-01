@@ -8,143 +8,100 @@
   background-color: #fff6;
   backdrop-filter: blur(12px);
 }
+
+/* NAVBAR CONTAINER */
 .navbar-container {
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 4rem 1rem 4rem;
-  max-width: 1350px;
+  padding: 1rem 5% 1rem 5%;
+  max-height: 6vh;
+  max-width: 100%;
 }
 
-/* Logo container */
+/* LOGO CONTAINER */
 .navbar-logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 14px;
+  max-height: 100%;
+  max-width: 10%;
+  padding-top: 0.5%;
+  padding-right: 12em;
 }
-.navbar-title {
-  font-size: 26px;
-  font-weight: bold;
-  color: #92400e;
-  line-height: 1;
-}
-.navbar-subtitle {
-  font-size: 14px;
-  color: rgb(87, 83, 78);
-  margin-top: 2px;
-  line-height: 1.1;
-}
-.navbar-logo-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
-}
-/* Gradient circle for the logo */
-.molino32-gradient {
-  background: linear-gradient(
-    135deg,
-    #a0522d 0%,
-    #d2691e 25%,
-    #f4a460 50%,
-    #8b4513 75%,
-    #5a2e0a 100%
-  );
-  border-radius: 9999px;
-  height: 3rem;
-  width: 3rem;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+.navbar-logo img {
+  width: 100%;
+  height: 100%;
 }
 
-/* Sections Navigation */
+/* SECTIONS CONTAINER */
 .navbar-menu {
   display: flex;
-  gap: 36px;
+  gap: 50px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
 }
 .navbar-menu li a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 100%;
-  padding: 2px 0;
-  border-bottom: 2px solid transparent;
+  font-size: 110%;
   transition: color 0.2s, border-bottom 0.2s;
 }
 .navbar-menu li a.active,
 .navbar-menu li a:hover {
-  color: #a05a1c;
-  border-radius: 4px 4px 0 0;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s, border-bottom 0.2s;
-}
-.navbar-menu li a i {
-  font-size: 24px;
+  color: #b28564;
+  transition: color 0.2s;
 }
 
+/* SEARCH CONTAINER */
+.navbar-search-container {
+  display: flex;
+  gap: 0.5rem;
+  padding-right: 3rem;
+  padding-left: 0.6rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 100px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.navbar-search-container i {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+  padding-top: 7px;
+}
+.navbar-search::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+}
+.navbar-search {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 18px;
+  color: #333;
+  padding: 6px 0;
+  width: 160px;
+}
+
+/* ICONS CONTAINER */
 .navbar-icons {
   display: flex;
   gap: 2rem;
 }
 .navbar-icons a.active,
 .navbar-icons a.active i {
-  color: #a05a1c !important;
-  border-radius: 4px 4px 0 0;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s, border-bottom 0.2s;
+  color: #b28564;
+  transition: color 0.2s;
 }
-/* Search Container */
-.navbar-search-container {
-  padding-right: 5rem;
-  padding-left: 0.6rem;
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 9999px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.navbar-search-container i {
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 18px;
-  margin-right: 15px;
-}
-
-.navbar-search {
-  border: none;
-  background: transparent;
-  outline: none;
-  font-size: 18px;
-  color: #222;
-  padding: 6px 0;
-  width: 160px;
-}
-
-.navbar-search::placeholder {
-  color: rgba(0, 0, 0, 0.4);
-}
-.bx {
+.bx-cart,
+.bx-user {
   color: #333;
   padding-top: 0.4rem;
   font-size: 24px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-bottom 0.2s;
+  transition: color 0.2s;
 }
-.bx:hover {
-  color: #a05a1c;
-  border-radius: 4px 4px 0 0;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s, border-bottom 0.2s;
+.bx-cart:hover,
+.bx-user:hover {
+  color: #b28564;
+  transition: color 0.2s;
 }
