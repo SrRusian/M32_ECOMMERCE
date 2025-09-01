@@ -1,5 +1,5 @@
 #footer {
-  padding: 4rem 4rem 1rem 4rem;
+  padding: 2rem 4rem 0.5rem 4rem;
 }
 .footer-container {
   display: flex;
@@ -12,7 +12,7 @@
 .footer-social {
   display: flex;
   gap: 5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 .footer-social a {
   font-size: 30px;
