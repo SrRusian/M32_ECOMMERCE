@@ -5,12 +5,11 @@
   justify-content: center;
   background: radial-gradient(
     circle at 70% 40%,
-    #f3d1a2 0%,
-    #f7e7d2 60%,
-    #f3d1a2 100%
+    #e1daca 0%,
+    #fffdf9 60%,
+    #e1daca 100%
   );
-  box-shadow: 0 0.5rem 3rem rgba(160, 90, 28, 0.12);
-  gap: 10rem;
+  gap: 20vh;
   height: 85vh;
   padding-bottom: 10vh;
 }
