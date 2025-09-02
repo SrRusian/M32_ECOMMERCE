@@ -29,7 +29,7 @@
     }
 
     // mark active link by pathname (includes menu links and icon links)
-    const path = location.pathname.replace(/\/$/, '') || '/index.html';
+    const path = location.pathname.replace(/\/$/, '') || '/M32_ECOMMERCE/index.html';
     const anchors = container.querySelectorAll('a[href]');
     anchors.forEach((a) => {
       const href = a.getAttribute('href');
@@ -37,8 +37,8 @@
       // resolve href to absolute pathname to compare reliably
       const resolver = document.createElement('a');
       resolver.href = href;
-      const hrefPath = resolver.pathname.replace(/\/$/, '') || '/index.html';
-      if (hrefPath === path || (path === '/index.html' && hrefPath === '/')) {
+      const hrefPath = resolver.pathname.replace(/\/$/, '') || '/M32_ECOMMERCE/index.html';
+      if (hrefPath === path || (path === '/M32_ECOMMERCE/index.html' && hrefPath === '/M32_ECOMMERCE')) {
         a.classList.add('active');
       } else {
         a.classList.remove('active');
