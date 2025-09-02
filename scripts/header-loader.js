@@ -2,7 +2,7 @@
   try {
     const container = document.getElementById('site-header');
     if (!container) return;
-    const resp = await fetch('/partials/header.html');
+    const resp = await fetch('../partials/header.html');
     if (!resp.ok) return console.warn('header not found:', resp.status);
     container.innerHTML = await resp.text();
 
@@ -29,7 +29,7 @@
     }
 
     // mark active link by pathname (includes menu links and icon links)
-    const path = location.pathname.replace(/\/$/, '') || '/index.html';
+    const path = location.pathname.replace(/\/$/, '') || '../index.html';
     const anchors = container.querySelectorAll('a[href]');
     anchors.forEach((a) => {
       const href = a.getAttribute('href');
@@ -37,8 +37,8 @@
       // resolve href to absolute pathname to compare reliably
       const resolver = document.createElement('a');
       resolver.href = href;
-      const hrefPath = resolver.pathname.replace(/\/$/, '') || '/index.html';
-      if (hrefPath === path || (path === '/index.html' && hrefPath === '/')) {
+      const hrefPath = resolver.pathname.replace(/\/$/, '') || '../index.html';
+      if (hrefPath === path || (path === '/..index.html' && hrefPath === '/')) {
         a.classList.add('active');
       } else {
         a.classList.remove('active');
