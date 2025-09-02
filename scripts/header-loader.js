@@ -2,7 +2,7 @@
   try {
     const container = document.getElementById('site-header');
     if (!container) return;
-    const resp = await fetch('/partials/header.html');
+    const resp = await fetch('/M32_ECOMMERCE/partials/header.html');
     if (!resp.ok) return console.warn('header not found:', resp.status);
     container.innerHTML = await resp.text();
 
