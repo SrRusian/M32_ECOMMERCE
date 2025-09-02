@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/features.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link
       rel="stylesheet"
@@ -48,24 +47,23 @@
       </div>
     </nav>
 
-    <section class="hero-section">
+    <section class="hero-section section" id="hero">
       <div class="hero-content">
         <h1>
           <span class="hero-title-main">Molino32</span><br />
           <span class="hero-title-sub">Cursos de Cocina</span>
         </h1>
         <p>
-          Transforma tu pasión culinaria en arte con nuestros cursos de cocina,
-          guiado por chefs expertos y sabores auténticos.
+          Transfoma tu pasión culinaria en arte con nuestros cursos guiados por
+          chefs expertos.
         </p>
         <div class="hero-buttons">
           <a href="courses.html" class="btn-main">
             Explorar Cursos <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="#" class="btn-outline"> Ver Demo Gratis </a>
+          <a href="#" class="btn-outline">Ver Demo Gratis</a>
         </div>
       </div>
-
       <div class="hero-image-container">
         <img
           src="assets/images/introduction.jpg"
@@ -82,163 +80,51 @@
       </div>
     </section>
 
-    <section class="why-section">
-      <h2>¿Por qué elegir Molino32?</h2>
-      <p>
-        Ofrecemos la experiencia de aprendizaje culinario más completa con
-        instructores de clase mundial
-      </p>
-      <div class="why-cards">
-        <div class="why-card">
-          <div class="why-icon">
-            <i class="fa-solid fa-user-chef"></i>
+    <section class="why-section section" id="why">
+      <div>
+        <h2>¿Por qué elegir Molino32?</h2>
+        <p>
+          Ofrecemos la experiencia de aprendizaje culinario más completa con
+          instructores de clase mundial
+        </p>
+        <div class="why-cards">
+          <div class="why-card">
+            <div class="why-icon">
+              <i class="bx bx-restaurant"></i>
+            </div>
+            <h3>Chefs Profesionales</h3>
+            <p>Aprende de chefs con experiencia en cocinas internacionales</p>
           </div>
-          <h3>Chefs Profesionales</h3>
-          <p>
-            Aprende de chefs con experiencia en restaurantes de prestigio y
-            cocinas internacionales
-          </p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <i class="fa-solid fa-book-open"></i>
+          <div class="why-card">
+            <div class="why-icon">
+              <i class="bx bx-book-open"></i>
+            </div>
+            <h3>Contenido Interactivo</h3>
+            <p>Videos HD, recetas descargables y ejercicios prácticos</p>
           </div>
-          <h3>Contenido Interactivo</h3>
-          <p>
-            Videos HD, recetas descargables y ejercicios prácticos para dominar
-            cada técnica
-          </p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <i class="fa-solid fa-award"></i>
+          <div class="why-card">
+            <div class="why-icon">
+              <i class="bx bx-award"></i>
+            </div>
+            <h3>Certificación</h3>
+            <p>Obtén certificados que validen tus habilidades culinarias</p>
           </div>
-          <h3>Certificación Oficial</h3>
-          <p>
-            Obtén certificados reconocidos que validen tus habilidades
-            culinarias
-          </p>
         </div>
       </div>
     </section>
 
-    <section class="featured-section">
-      <h2>Cursos Destacados</h2>
-      <p>Los cursos más populares de nuestra plataforma</p>
-      <div class="featured-cards">
-        <!-- Card 1 -->
-        <div class="featured-card">
-          <div class="featured-card-img">
-            <span class="featured-discount">31% OFF</span>
-            <button class="featured-fav">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <img
-              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
-              alt="Curso Italiano"
-            />
-          </div>
-          <div class="featured-card-body">
-            <span class="featured-level">Intermedio</span>
-            <span class="featured-rating"
-              ><i class="fa-solid fa-star"></i> 4.9</span
-            >
-            <h3>Cocina Italiana Auténtica</h3>
-            <p class="featured-chef">Por Chef Marco Rossi</p>
-            <p class="featured-desc">
-              Aprende los secretos de la cocina italiana tradicional con recetas
-              auténticas de pasta, risotto y más, directamente desde Italia.
-            </p>
-            <div class="featured-info">
-              <span><i class="fa-regular fa-clock"></i> 8 horas</span>
-              <span><i class="fa-regular fa-file-lines"></i> 24 lecciones</span>
-              <span><i class="fa-solid fa-users"></i> 2,847</span>
-            </div>
-            <div class="featured-price-row">
-              <span class="featured-price"
-                >$89.99 <span class="featured-old-price">$129.99</span></span
-              >
-              <button class="btn-main featured-cart">Agregar al Carrito</button>
-            </div>
-          </div>
+    <section class="featured-section section" id="featured">
+      <div>
+        <h2>Cursos Destacados</h2>
+        <p>Una selección aleatoria de cursos para comenzar</p>
+
+        <div class="featured-cards" id="featured-cards">
+          <!-- Se inyectan 3 cards dinámicamente -->
         </div>
-        <!-- Card 2 -->
-        <div class="featured-card">
-          <div class="featured-card-img">
-            <span class="featured-discount">25% OFF</span>
-            <button class="featured-fav">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <img
-              src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80"
-              alt="Curso Francés"
-            />
-          </div>
-          <div class="featured-card-body">
-            <span class="featured-level">Avanzado</span>
-            <span class="featured-rating"
-              ><i class="fa-solid fa-star"></i> 4.8</span
-            >
-            <h3>Repostería Francesa Profesional</h3>
-            <p class="featured-chef">Por Chef Marie Dubois</p>
-            <p class="featured-desc">
-              Domina las técnicas de repostería francesa con croissants,
-              macarons y postres elegantes, llevando tus habilidades al
-              siguiente nivel.
-            </p>
-            <div class="featured-info">
-              <span><i class="fa-regular fa-clock"></i> 12 horas</span>
-              <span><i class="fa-regular fa-file-lines"></i> 36 lecciones</span>
-              <span><i class="fa-solid fa-users"></i> 1,923</span>
-            </div>
-            <div class="featured-price-row">
-              <span class="featured-price"
-                >$149.99 <span class="featured-old-price">$199.99</span></span
-              >
-              <button class="btn-main featured-cart">Agregar al Carrito</button>
-            </div>
-          </div>
+
+        <div class="featured-all">
+          <a href="courses.html" class="btn-outline">Ver Todos los Cursos</a>
         </div>
-        <!-- Card 3 -->
-        <div class="featured-card">
-          <div class="featured-card-img">
-            <!-- <span class="featured-discount">30% OFF</span> -->
-            <button class="featured-fav">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <img
-              src="https://images.unsplash.com/photo-1464306076886-debede6bbf94?auto=format&fit=crop&w=600&q=80"
-              alt="Curso Mexicano"
-            />
-          </div>
-          <div class="featured-card-body">
-            <span class="featured-level">Principiante</span>
-            <span class="featured-rating"
-              ><i class="fa-solid fa-star"></i> 4.9</span
-            >
-            <h3>Cocina Mexicana Tradicional</h3>
-            <p class="featured-chef">Por Chef Ana García</p>
-            <p class="featured-desc">
-              Descubre los sabores auténticos de México con recetas
-              tradicionales y técnicas ancestrales, perfectas para cualquier
-              nivel.
-            </p>
-            <div class="featured-info">
-              <span><i class="fa-regular fa-clock"></i> 6 horas</span>
-              <span><i class="fa-regular fa-file-lines"></i> 18 lecciones</span>
-              <span><i class="fa-solid fa-users"></i> 3,421</span>
-            </div>
-            <div class="featured-price-row">
-              <span class="featured-price"
-                >$69.99 <span class="featured-old-price">$99.99</span></span
-              >
-              <button class="btn-main featured-cart">Agregar al Carrito</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="featured-all">
-        <a href="courses.html" class="btn-outline">Ver Todos los Cursos</a>
       </div>
     </section>
 
@@ -246,30 +132,200 @@
       <div class="footer-container">
         <div class="footer-info">
           <div class="footer-social">
-          <a
-            href="https://www.facebook.com/share/16J3cR2q5B/?mibextid=wwXIfr"
-            target="_blank"
-            ><i class="fa-brands fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/molino30ydos?igsh=ZWE3ZXdraXNpMTFm"
-            target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.tiktok.com/@molino30ydos?_t=ZS-8zMq4saZkzY&_r=1"
-            target="_blank"
-            ><i class="fa-brands fa-tiktok"></i
-          ></a>
-          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a
+              href="https://www.facebook.com/share/16J3cR2q5B/?mibextid=wwXIfr"
+              target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/molino30ydos?igsh=ZWE3ZXdraXNpMTFm"
+              target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@molino30ydos?_t=ZS-8zMq4saZkzY&_r=1"
+              target="_blank"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
         </div>
+        <div class="footer-copyright">
+          <div class="footer-copyright-text">
+            <p>
+              &copy; 2023 Molino 30 y Dos. Todos los derechos reservados. | Site
+              design by SrRusian
+            </p>
+          </div>
         </div>
-       <div class="footer-copyright">
-         <div class="footer-copyright-text">
-          <p>&copy; 2023 Molino 30 y Dos. Todos los derechos reservados. | Site design by SrRusian</p>
-        </div>
-       </div>
       </div>
     </footer>
+
+    <script>
+      // ---------- small helpers ----------
+      function escapeHtml(s) {
+        return String(s || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+      function formatPrice(n) {
+        if (n == null || n === "") return "$0.00";
+        return "$" + Number(n).toFixed(2);
+      }
+
+      // ---------- fetch 3 random featured courses ----------
+      async function loadFeatured() {
+        try {
+          const res = await fetch("https://molino32.com/api/get-courses.php");
+          if (!res.ok) throw new Error("Network");
+          const json = await res.json();
+          const list = json.data || [];
+          if (!list.length) {
+            document.getElementById("featured-cards").innerHTML =
+              "<p>No hay cursos disponibles.</p>";
+            return;
+          }
+          // shuffle & take 3
+          const shuffled = list.sort(() => Math.random() - 0.5).slice(0, 3);
+          const container = document.getElementById("featured-cards");
+          container.innerHTML = "";
+          shuffled.forEach((c) => {
+            const img = c.img || c.image || "assets/images/placeholder.jpg";
+            const discount = c.discount
+              ? `<span class="featured-discount">${escapeHtml(
+                  c.discount
+                )}% OFF</span>`
+              : "";
+            const rating = c.rating || "0";
+            const time = c.time ? `${escapeHtml(c.time)} h` : "";
+            const lessons = c.sections ?? c.lessons ?? "";
+            const users = c.users ?? "";
+            const card = document.createElement("div");
+            card.className = "featured-card";
+            card.innerHTML = `
+              <div class="featured-card-img">
+                ${discount}
+                <button class="featured-fav" title="Favorito"><i class="bx bx-heart"></i></button>
+                <img src="${escapeHtml(img)}" alt="${escapeHtml(
+              c.alt || c.name
+            )}" />
+              </div>
+              <div class="featured-card-body">
+                <span class="featured-level">${escapeHtml(
+                  c._difficulty || c.difficulty || ""
+                )}</span>
+                <span class="featured-rating"><i class="bx bxs-star"></i> ${escapeHtml(
+                  rating
+                )}</span>
+                <h3>${escapeHtml(c.name || c.title || "")}</h3>
+                <p class="featured-chef">Por ${escapeHtml(
+                  c.author || c.chef || "Instructor"
+                )}</p>
+                <p class="featured-desc">${escapeHtml(
+                  (c.description || "").slice(0, 140)
+                )}</p>
+                <div class="featured-info">
+                  <span title="Duración"><i class="bx bx-time"></i> ${escapeHtml(
+                    time
+                  )}</span>
+                  <span title="Lecciones"><i class="bx bx-book-open"></i> ${escapeHtml(
+                    lessons
+                  )}</span>
+                  <span title="Alumnos"><i class="bx bx-group"></i> ${escapeHtml(
+                    users
+                  )}</span>
+                </div>
+                <div class="featured-price-row">
+                  <span class="featured-price">${formatPrice(c.price)}</span>
+                  <button class="btn-main featured-cart" onclick="location.href='courses.html'">Ver Curso</button>
+                </div>
+              </div>
+            `;
+            container.appendChild(card);
+          });
+        } catch (e) {
+          console.error(e);
+          document.getElementById("featured-cards").innerHTML =
+            "<p>Error cargando cursos.</p>";
+        }
+      }
+
+      // ---------- auto-scroll with wheel & touch ----------
+      (function () {
+        const sections = Array.from(document.querySelectorAll(".section"));
+        let scrolling = false;
+        let current = 0;
+
+        // intersection observer to set current and add in-view class
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((ent) => {
+              if (ent.isIntersecting) {
+                ent.target.classList.add("in-view");
+                current = sections.indexOf(ent.target);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+        sections.forEach((s) => io.observe(s));
+
+        // wheel handler
+        window.addEventListener(
+          "wheel",
+          (e) => {
+            if (scrolling) return;
+            if (Math.abs(e.deltaY) < 10) return;
+            if (e.deltaY > 0 && current < sections.length - 1) {
+              scrolling = true;
+              sections[current + 1].scrollIntoView({ behavior: "smooth" });
+              setTimeout(() => (scrolling = false), 900);
+            } else if (e.deltaY < 0 && current > 0) {
+              scrolling = true;
+              sections[current - 1].scrollIntoView({ behavior: "smooth" });
+              setTimeout(() => (scrolling = false), 900);
+            }
+          },
+          { passive: true }
+        );
+
+        // touch swipe
+        let startY = null;
+        window.addEventListener(
+          "touchstart",
+          (e) => (startY = e.touches[0].clientY),
+          { passive: true }
+        );
+        window.addEventListener(
+          "touchend",
+          (e) => {
+            if (startY == null) return;
+            const endY = e.changedTouches[0].clientY;
+            const diff = startY - endY;
+            if (Math.abs(diff) < 40) return;
+            if (scrolling) return;
+            if (diff > 0 && current < sections.length - 1) {
+              scrolling = true;
+              sections[current + 1].scrollIntoView({ behavior: "smooth" });
+              setTimeout(() => (scrolling = false), 900);
+            }
+            if (diff < 0 && current > 0) {
+              scrolling = true;
+              sections[current - 1].scrollIntoView({ behavior: "smooth" });
+              setTimeout(() => (scrolling = false), 900);
+            }
+            startY = null;
+          },
+          { passive: true }
+        );
+      })();
+
+      // ---------- init ----------
+      document.addEventListener("DOMContentLoaded", () => {
+        loadFeatured();
+      });
+    </script>
   </body>
 </html>

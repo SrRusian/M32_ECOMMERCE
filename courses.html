@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MOLINO32</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MOLINO32 - Cursos</title>
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/courses.css" />
@@ -46,144 +46,192 @@
         </div>
       </div>
     </nav>
-    <section class="courses-section">
-      <h1>Todos los Cursos</h1>
-      <p>Descubre nuestra colección completa de cursos culinarios</p>
-      <div class="courses-filter">
-        <span>Filtrar por categoría:</span>
-        <button class="btn-main active">Todos los Cursos</button>
-        <button class="btn-outline">
-          <i class="fa-solid fa-utensils"></i> Cocina Italiana
-        </button>
-        <button class="btn-outline">
-          <i class="fa-solid fa-cake-candles"></i> Repostería
-        </button>
-        <button class="btn-outline">
-          <i class="fa-solid fa-pepper-hot"></i> Cocina Mexicana
-        </button>
-        <button class="btn-outline">
-          <i class="fa-solid fa-bowl-rice"></i> Cocina Asiática
-        </button>
-        <button class="btn-outline">
-          <i class="fa-solid fa-bread-slice"></i> Panadería
-        </button>
-        <button class="btn-outline">
-          <i class="fa-solid fa-leaf"></i> Cocina Vegana
-        </button>
-      </div>
-      <div class="courses-cards">
-        <!-- Card 1 -->
-        <div class="featured-card">
-          <div class="featured-card-img">
-            <span class="featured-discount">31% OFF</span>
-            <button class="featured-fav">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <img
-              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
-              alt="Curso Italiano"
-            />
-          </div>
-          <div class="featured-card-body">
-            <span class="featured-level">Intermedio</span>
-            <span class="featured-rating"
-              ><i class="fa-solid fa-star"></i> 4.9</span
-            >
-            <h3>Cocina Italiana Auténtica</h3>
-            <p class="featured-chef">Por Chef Marco Rossi</p>
-            <p class="featured-desc">
-              Aprende los secretos de la cocina italiana tradicional con recetas
-              auténticas de pasta, risotto y más, directamente desde Italia.
-            </p>
-            <div class="featured-info">
-              <span><i class="fa-regular fa-clock"></i> 8 horas</span>
-              <span><i class="fa-regular fa-file-lines"></i> 24 lecciones</span>
-              <span><i class="fa-solid fa-users"></i> 2,847</span>
-            </div>
-            <div class="featured-price-row">
-              <span class="featured-price"
-                >$89.99 <span class="featured-old-price">$129.99</span></span
-              >
-              <button class="btn-main featured-cart">Agregar al Carrito</button>
-            </div>
-          </div>
+
+    <main class="courses-section">
+      <div
+        class="container"
+        style="max-width: 1200px; margin: 0 auto; padding: 48px 24px"
+      >
+        <h1>Todos los Cursos</h1>
+        <p>Descubre nuestra colección completa de cursos culinarios</p>
+
+        <div class="courses-filter" id="courses-filter">
+          <!-- botones estáticos de ejemplo, usa data-id matching id_category -->
+          <button class="filter-btn active" data-id="all">
+            <i class="bx bx-grid-alt"></i> Todos los Cursos
+          </button>
+          <button class="filter-btn" data-id="1">
+            <i class="bx bx-restaurant"></i> Cocina Italiana
+          </button>
+          <button class="filter-btn" data-id="2">
+            <i class="bx bx-cake"></i> Repostería
+          </button>
+          <button class="filter-btn" data-id="3">
+            <i class="bx bx-food-menu"></i> Cocina Mexicana
+          </button>
+          <button class="filter-btn" data-id="4">
+            <i class="bx bx-noodles"></i> Cocina Asiática
+          </button>
+          <button class="filter-btn" data-id="5">
+            <i class="bx bx-baguette"></i> Panadería
+          </button>
+          <button class="filter-btn" data-id="6">
+            <i class="bx bx-leaf"></i> Cocina Vegana
+          </button>
         </div>
-        <!-- Card 2 -->
-        <div class="featured-card">
-          <div class="featured-card-img">
-            <span class="featured-discount">25% OFF</span>
-            <button class="featured-fav">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <img
-              src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80"
-              alt="Curso Francés"
-            />
-          </div>
-          <div class="featured-card-body">
-            <span class="featured-level">Avanzado</span>
-            <span class="featured-rating"
-              ><i class="fa-solid fa-star"></i> 4.8</span
-            >
-            <h3>Repostería Francesa Profesional</h3>
-            <p class="featured-chef">Por Chef Marie Dubois</p>
-            <p class="featured-desc">
-              Domina las técnicas de repostería francesa con croissants,
-              macarons y postres elegantes, llevando tus habilidades al
-              siguiente nivel.
-            </p>
-            <div class="featured-info">
-              <span><i class="fa-regular fa-clock"></i> 12 horas</span>
-              <span><i class="fa-regular fa-file-lines"></i> 36 lecciones</span>
-              <span><i class="fa-solid fa-users"></i> 1,923</span>
-            </div>
-            <div class="featured-price-row">
-              <span class="featured-price"
-                >$149.99 <span class="featured-old-price">$199.99</span></span
-              >
-              <button class="btn-main featured-cart">Agregar al Carrito</button>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="featured-card">
-          <div class="featured-card-img">
-            <span class="featured-discount">30% OFF</span>
-            <button class="featured-fav">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <img
-              src="https://images.unsplash.com/photo-1464306076886-debede6bbf94?auto=format&fit=crop&w=600&q=80"
-              alt="Curso Mexicano"
-            />
-          </div>
-          <div class="featured-card-body">
-            <span class="featured-level">Principiante</span>
-            <span class="featured-rating"
-              ><i class="fa-solid fa-star"></i> 4.9</span
-            >
-            <h3>Cocina Mexicana Tradicional</h3>
-            <p class="featured-chef">Por Chef Ana García</p>
-            <p class="featured-desc">
-              Descubre los sabores auténticos de México con recetas
-              tradicionales y técnicas ancestrales, perfectas para cualquier
-              nivel.
-            </p>
-            <div class="featured-info">
-              <span><i class="fa-regular fa-clock"></i> 6 horas</span>
-              <span><i class="fa-regular fa-file-lines"></i> 18 lecciones</span>
-              <span><i class="fa-solid fa-users"></i> 3,421</span>
-            </div>
-            <div class="featured-price-row">
-              <span class="featured-price"
-                >$69.99 <span class="featured-old-price">$99.99</span></span
-              >
-              <button class="btn-main featured-cart">Agregar al Carrito</button>
-            </div>
-          </div>
+
+        <div class="courses-cards" id="courses-cards">
+          <!-- cards renderizadas aquí -->
         </div>
       </div>
-    </section>
+    </main>
+
+    <script>
+      async function loadCourses() {
+        try {
+          const res = await fetch("https://molino32.com/api/get-courses.php");
+          if (!res.ok) throw new Error("Network error");
+          const json = await res.json();
+          if (!json.success) throw new Error("API error");
+          const courses = json.data || [];
+          window._courses = courses; // cache local para filtros
+          renderCourses(courses);
+
+          // init filtros
+          document.querySelectorAll(".filter-btn").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              document
+                .querySelectorAll(".filter-btn")
+                .forEach((b) => b.classList.remove("active"));
+              btn.classList.add("active");
+              const id = btn.getAttribute("data-id");
+              if (id === "all") renderCourses(window._courses);
+              else
+                renderCourses(
+                  window._courses.filter(
+                    (c) => String(c.id_category) === String(id)
+                  )
+                );
+            });
+          });
+        } catch (err) {
+          console.error(err);
+          document.getElementById("courses-cards").innerHTML =
+            "<p>Error al cargar cursos.</p>";
+        }
+      }
+
+      function renderCourses(list) {
+        const container = document.getElementById("courses-cards");
+        container.innerHTML = "";
+        if (!list.length) {
+          container.innerHTML = "<p>No hay cursos en esta categoría.</p>";
+          return;
+        }
+        list.forEach((c) => {
+          const price = formatPrice(c.price);
+          const oldPrice = c.old_price
+            ? `<span class="featured-old-price">${formatPrice(
+                c.old_price
+              )}</span>`
+            : "";
+          const discount = c.discount
+            ? `<div class="featured-discount">${c.discount}% OFF</div>`
+            : "";
+          const img = c.img || "assets/images/placeholder.jpg";
+          const rating = c.rating ? c.rating : "0";
+          const time = c.time ? `${c.time} h` : "";
+          const lessons = c.sections ?? c.lessons ?? "";
+          const users = c.users ?? "";
+          const categoryName =
+            c.category_name || c.category || mapCategoryName(c.id_category);
+
+          const card = document.createElement("div");
+          card.className = "featured-card";
+          card.innerHTML = `
+            <div class="featured-card-img">
+              <img src="${escapeHtml(img)}" alt="${escapeHtml(
+            c.alt || c.name || ""
+          )}">
+              ${discount}
+              <button class="featured-fav" title="Agregar a favoritos"><i class="bx bx-heart"></i></button>
+            </div>
+            <div class="featured-card-body">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span class="featured-level">${escapeHtml(categoryName)}</span>
+                <span class="featured-rating"><i class="bx bxs-star"></i> ${escapeHtml(
+                  rating
+                )}</span>
+              </div>
+              <h3>${escapeHtml(c.name || c.title || "")}</h3>
+              <p class="featured-chef">Por ${escapeHtml(
+                c.author || c.chef || "Instructor"
+              )}</p>
+              <p class="featured-desc">${escapeHtml(
+                (c.description || "").slice(0, 160)
+              )}</p>
+
+              <div class="featured-info">
+                <span title="Duración"><i class="bx bx-time"></i> ${escapeHtml(
+                  time
+                )}</span>
+                <span title="Lecciones"><i class="bx bx-book-open"></i> ${escapeHtml(
+                  lessons
+                )}</span>
+                <span title="Alumnos"><i class="bx bx-group"></i> ${escapeHtml(
+                  users
+                )}</span>
+                <span title="Categoria" style="margin-left:auto"><i class="bx bx-tag"></i> ${escapeHtml(
+                  categoryName
+                )}</span>
+              </div>
+
+              <div class="featured-price-row">
+                <div>
+                  <span class="featured-price">${price}</span>
+                  ${oldPrice}
+                </div>
+                <button class="featured-cart" onclick="addToCart(${
+                  c.id
+                })">Agregar al Carrito</button>
+              </div>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      }
+
+      function mapCategoryName(id) {
+        const map = {
+          1: "Cocina Italiana",
+          2: "Repostería",
+          3: "Cocina Mexicana",
+          4: "Cocina Asiática",
+          5: "Panadería",
+          6: "Cocina Vegana",
+        };
+        return map[String(id)] || "General";
+      }
+
+      function formatPrice(n) {
+        if (n === null || n === undefined || n === "") return "$0.00";
+        return "$" + Number(n).toFixed(2);
+      }
+
+      function escapeHtml(s) {
+        return String(s)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function addToCart(id) {
+        console.log("Agregar al carrito", id);
+      }
+
+      document.addEventListener("DOMContentLoaded", loadCourses);
+    </script>
 
     <footer id="footer">
       <div class="footer-container">
