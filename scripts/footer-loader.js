@@ -2,7 +2,7 @@
   try {
     const container = document.getElementById('site-footer');
     if (!container) return;
-    const resp = await fetch('../partials/footer.html');
+    const resp = await fetch('/partials/footer.html');
     if (!resp.ok) {
       console.warn('footer not found:', resp.status);
       return;
