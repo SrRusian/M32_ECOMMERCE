@@ -2,7 +2,9 @@
   try {
     const container = document.getElementById('site-header');
     if (!container) return;
-    const resp = await fetch('/partials/header.html');
+
+    // <-- usar ruta relativa en lugar de absoluta para que funcione en GitHub Pages
+    const resp = await fetch('partials/header.html');
     if (!resp.ok) return console.warn('header not found:', resp.status);
     container.innerHTML = await resp.text();
 
