@@ -7,40 +7,21 @@
     <link rel="stylesheet" href="styles/account.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
   </head>
   <body>
-    <nav id="navbar">
-      <div class="navbar-container">
-        <div class="navbar-logo">
-          <img src="assets/logo/Brand-logo-01.png" alt="Molino32-Logo" />
-        </div>
-        <ul class="navbar-menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="courses.html">Cursos</a></li>
-          <li><a href="#">Sobre Mi</a></li>
-        </ul>
-        <div class="navbar-icons">
-          <div class="navbar-search-container">
-            <i class="bx bx-search"></i>
-            <input
-              type="text"
-              class="navbar-search"
-              placeholder="Buscar cursos..."
-            />
-          </div>
-          <div>
-            <a href="cart.html"><i class="bx bx-cart"></i></a>
-          </div>
-          <div>
-            <a href="account.html" class="active"><i class="bx bx-user"></i></a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <!-- NAVBAR IMPORT -->
+    <div id="site-header"></div>
+    <script src="/scripts/header-loader.js" defer></script>
+
     <main>
       <div class="account-tabs">
         <button id="login-tab" class="tab-btn active">Iniciar Sesión</button>
@@ -119,6 +100,10 @@
         </form>
       </div>
     </main>
+
+    <!-- FOOTER IMPORT -->
+    <div id="site-footer"></div>
+    <script src="/scripts/footer-loader.js" defer></script>
   </body>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
