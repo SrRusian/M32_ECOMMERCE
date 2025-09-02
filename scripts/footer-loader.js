@@ -2,9 +2,7 @@
   try {
     const container = document.getElementById('site-footer');
     if (!container) return;
-
-    // usar ruta relativa para GitHub Pages (evita la barra inicial)
-    const resp = await fetch('./partials/footer.html');
+    const resp = await fetch('/partials/footer.html');
     if (!resp.ok) {
       console.warn('footer not found:', resp.status);
       return;
