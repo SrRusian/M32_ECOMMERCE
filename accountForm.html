@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Molino32</title>
-    <link rel="stylesheet" href="./styles/account.css" />
+    <link rel="stylesheet" href="./styles/account/form.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/general.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
@@ -162,71 +162,6 @@
     <!-- FOOTER IMPORT -->
     <div id="site-footer"></div>
     <script src="./scripts/footer-loader.js" defer></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const loginTab = document.getElementById("login-tab");
-        const registerTab = document.getElementById("register-tab");
-        const loginForm = document.getElementById("login-form");
-        const registerForm = document.getElementById("register-form");
-
-        function showLogin() {
-          registerForm.classList.remove("active");
-          loginForm.classList.add("active");
-          loginTab.classList.add("active");
-          registerTab.classList.remove("active");
-        }
-
-        function showRegister() {
-          loginForm.classList.remove("active");
-          registerForm.classList.add("active");
-          registerTab.classList.add("active");
-          loginTab.classList.remove("active");
-        }
-
-        loginTab.addEventListener("click", showLogin);
-        registerTab.addEventListener("click", showRegister);
-
-        // Mostrar/ocultar contraseña (básico)
-        document.querySelectorAll(".show-pass").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const row = btn.closest(".password-row");
-            const input = row.querySelector("input");
-            input.type = input.type === "password" ? "text" : "password";
-            btn.querySelector("i").classList.toggle("fa-eye-slash");
-          });
-        });
-      });
-
-      // Asume que ya tienes listeners para tabs. Si usas el código previo, añade estas líneas.
-      document.addEventListener("DOMContentLoaded", function () {
-        const authPanel = document.querySelector(".auth-panel");
-        const loginTab = document.getElementById("login-tab");
-        const registerTab = document.getElementById("register-tab");
-        const loginForm = document.getElementById("login-form");
-        const registerForm = document.getElementById("register-form");
-
-        function showAndReset(formToShow, firstInputSelector) {
-          // mostrar/ocultar se mantiene como en tu código
-          formToShow.classList.add("active");
-          // scroll al inicio del panel y enfocar primer campo
-          if (authPanel) authPanel.scrollTop = 0;
-          const first = formToShow.querySelector(firstInputSelector);
-          if (first) first.focus({ preventScroll: true });
-        }
-
-        loginTab?.addEventListener("click", () => {
-          showAndReset(loginForm, 'input[type="email"], input');
-          registerForm?.classList.remove("active");
-          loginForm?.classList.add("active");
-        });
-
-        registerTab?.addEventListener("click", () => {
-          showAndReset(registerForm, 'input[type="text"], input');
-          loginForm?.classList.remove("active");
-          registerForm?.classList.add("active");
-        });
-      });
-    </script>
+    <script src="./scripts/api/accountForm.js" defer></script>
   </body>
 </html>
