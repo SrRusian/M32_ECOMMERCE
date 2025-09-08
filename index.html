@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MOLINO32</title>
-    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/home/bundle.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/footer.css" />
@@ -23,6 +23,7 @@
     <script src="/scripts/header-loader.js" defer></script>
 
     <section class="hero-section section" id="hero">
+      <div class="hero-bg"></div>
       <div class="hero-content">
         <h1>
           <span class="hero-title-main">Molino32</span><br />
@@ -39,51 +40,83 @@
           <a href="#" class="btn-outline">Ver Demo Gratis</a>
         </div>
       </div>
-      <div class="hero-image-container">
-        <img
-          src="assets/images/introduction.jpg"
-          alt="Cocinando"
-          class="hero-image"
-        />
-        <div class="hero-badge">
-          <i class="fa-solid fa-user-group"></i>
-          <div>
-            <strong>12,000+</strong><br />
-            <span>Estudiantes Activos</span>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section class="why-section section" id="why">
+      <!-- SVG decorativo de fondo -->
+      <svg
+        class="why-bg-svg"
+        width="400"
+        height="180"
+        viewBox="0 0 400 180"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <ellipse
+          cx="200"
+          cy="90"
+          rx="180"
+          ry="60"
+          fill="#f3e6d7"
+          fill-opacity="0.22"
+        />
+        <ellipse
+          cx="320"
+          cy="40"
+          rx="60"
+          ry="18"
+          fill="#b28564"
+          fill-opacity="0.07"
+        />
+        <ellipse
+          cx="80"
+          cy="140"
+          rx="40"
+          ry="12"
+          fill="#b28564"
+          fill-opacity="0.06"
+        />
+      </svg>
       <div>
+        <span class="why-pretitle">Ventajas Molino32</span>
         <h2>¿Por qué elegir Molino32?</h2>
+        <div class="why-divider"></div>
         <p>
           Ofrecemos la experiencia de aprendizaje culinario más completa con
-          instructores de clase mundial
+          instructores de clase mundial.
         </p>
         <div class="why-cards">
           <div class="why-card">
+            <span class="why-number">1</span>
             <div class="why-icon">
               <i class="bx bx-restaurant"></i>
             </div>
             <h3>Chefs Profesionales</h3>
-            <p>Aprende de chefs con experiencia en cocinas internacionales</p>
+            <p>Aprende de chefs con experiencia en cocinas internacionales.</p>
           </div>
           <div class="why-card">
+            <span class="why-number">2</span>
             <div class="why-icon">
               <i class="bx bx-book-open"></i>
             </div>
             <h3>Contenido Interactivo</h3>
-            <p>Videos HD, recetas descargables y ejercicios prácticos</p>
+            <p>Videos HD, recetas descargables y ejercicios prácticos.</p>
           </div>
           <div class="why-card">
+            <span class="why-number">3</span>
             <div class="why-icon">
               <i class="bx bx-award"></i>
             </div>
             <h3>Certificación</h3>
-            <p>Obtén certificados que validen tus habilidades culinarias</p>
+            <p>Obtén certificados que validen tus habilidades culinarias.</p>
           </div>
+        </div>
+        <div class="why-extra">
+          <i class="fa-solid fa-circle-info"></i>
+          <span
+            >¡Más de <b>2,000 alumnos</b> han transformado su pasión en arte con
+            Molino32!</span
+          >
         </div>
       </div>
     </section>
@@ -91,6 +124,7 @@
     <section class="featured-section section" id="featured">
       <div>
         <h2>Cursos Destacados</h2>
+        <div class="featured-divider"></div>
         <p>Una selección aleatoria de cursos para comenzar</p>
 
         <div class="featured-cards" id="featured-cards">
@@ -123,19 +157,33 @@
 
       // ---------- fetch 3 random featured courses ----------
       async function loadFeatured() {
+        // Mostrar 3 skeletons mientras carga
+        const container = document.getElementById("featured-cards");
+        container.innerHTML = "";
+        for (let i = 0; i < 3; i++) {
+          const skeleton = document.createElement("div");
+          skeleton.className = "featured-card skeleton";
+          skeleton.innerHTML = `
+            <div class="skeleton-img"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line short"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-btn"></div>
+          `;
+          container.appendChild(skeleton);
+        }
+
         try {
           const res = await fetch("https://molino32.com/api/get-courses.php");
           if (!res.ok) throw new Error("Network");
           const json = await res.json();
           const list = json.data || [];
           if (!list.length) {
-            document.getElementById("featured-cards").innerHTML =
-              "<p>No hay cursos disponibles.</p>";
+            container.innerHTML = "<p>No hay cursos disponibles.</p>";
             return;
           }
           // shuffle & take 3
           const shuffled = list.sort(() => Math.random() - 0.5).slice(0, 3);
-          const container = document.getElementById("featured-cards");
           container.innerHTML = "";
           shuffled.forEach((c) => {
             const img = c.img || c.image || "assets/images/placeholder.jpg";
