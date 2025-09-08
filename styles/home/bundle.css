@@ -1,0 +1,36 @@
+@import url("./heroSection.css");
+@import url("./whySection.css");
+@import url("./featuredSection.css");
+@import url("./responsive.css");
+
+/* Global: scroll-snap y layout de pantalla completa */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  background: linear-gradient(180deg, #fffdf9 0%, #f7e7d2 100%);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Cada sección ocupa pantalla completa (ajusta en móviles) */
+.section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6vh 16px;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,229 @@
+/* ----------------------------- */
+/* WHY CHOOSE US (agrupado todo) */
+/* ----------------------------- */
+
+/* WHY CHOOSE US */
+.why-section {
+  position: relative;
+  background: #faf9f5
+    radial-gradient(ellipse at 50% 0%, #f3e6d7 0%, #faf9f5 70%);
+  padding: 5vh 0 5vh 0;
+  text-align: center;
+  overflow: hidden;
+}
+.why-bg-svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.why-pretitle {
+  display: inline-block;
+  color: #b28564;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  background: #f3e6d7;
+  padding: 0.2em 1.2em;
+  border-radius: 1em;
+  opacity: 0.85;
+}
+
+.why-section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #b28564;
+  margin-bottom: 0.3rem;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 1;
+}
+
+.why-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #b28564 0%, #e7d3c0 100%);
+  border-radius: 2px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.why-section p {
+  font-size: 1.15rem;
+  color: #7a6a58;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  z-index: 1;
+  position: relative;
+}
+
+.why-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.why-card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 1.5rem;
+  border: 1.5px solid #f3e6d7;
+  box-shadow: 0 2px 16px rgba(178, 133, 100, 0.07);
+  padding: 2.2rem 1.5rem 1.7rem 1.5rem;
+  width: 270px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  /* Animación solo cuando .in-view está en la sección */
+}
+.section.in-view .why-card {
+  opacity: 1;
+  transform: none;
+  animation: whyFadeIn 0.7s cubic-bezier(0.23, 1.01, 0.32, 1) both;
+}
+.section.in-view .why-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.section.in-view .why-card:nth-child(2) {
+  animation-delay: 0.22s;
+}
+.section.in-view .why-card:nth-child(3) {
+  animation-delay: 0.34s;
+}
+
+@keyframes whyFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.why-card:hover {
+  box-shadow: 0 8px 32px rgba(178, 133, 100, 0.13);
+  transform: translateY(-6px) scale(1.03);
+  border-color: #e7d3c0;
+}
+
+.why-number {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #b28564 60%, #e7d3c0 100%);
+  border-radius: 50%;
+  width: 2.1em;
+  height: 2.1em;
+  line-height: 2.1em;
+  margin-bottom: 0.7rem;
+  margin-top: -1.2rem;
+  box-shadow: 0 2px 8px rgba(178, 133, 100, 0.09);
+}
+
+.why-icon {
+  background: #fff;
+  border: 2.5px solid #b28564;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 2px 8px rgba(178, 133, 100, 0.07);
+  transition: border-color 0.2s;
+  font-size: 2rem;
+}
+.why-card:hover .why-icon {
+  border-color: #a0724a;
+}
+
+.why-icon i {
+  color: #b28564;
+  font-size: 2rem;
+}
+
+.why-card h3 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.7rem;
+  letter-spacing: -0.5px;
+}
+
+.why-card p {
+  font-size: 1rem;
+  color: #7a6a58;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.why-extra {
+  margin-top: 2.5rem;
+  color: #b28564;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+  background: #f3e6d7;
+  border-radius: 1.2em;
+  padding: 0.7em 1.5em;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 8px rgba(178, 133, 100, 0.07);
+  font-weight: 500;
+}
+.why-extra i {
+  color: #b28564;
+  font-size: 1.2em;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .why-cards {
+    gap: 1.2rem;
+  }
+  .why-card {
+    width: 95vw;
+    max-width: 340px;
+    margin-bottom: 1.5rem;
+  }
+  .why-bg-svg {
+    max-width: 100vw;
+    height: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .why-section h2 {
+    font-size: 1.5rem;
+  }
+  .why-pretitle {
+    font-size: 0.95rem;
+    padding: 0.15em 0.8em;
+  }
+  .why-extra {
+    font-size: 0.97rem;
+    padding: 0.6em 1em;
+  }
+}
