@@ -1,5 +1,5 @@
 /* ----------------------------- */
-/* FEATURED (agrupado todo)     */
+/* FEATURED (agrupado todo)      */
 /* ----------------------------- */
 
 /* FEATURED: usar grid para adaptarse */
@@ -7,67 +7,18 @@
   padding-top: 6vh;
   padding-bottom: 6vh;
   text-align: center;
-}
-.featured-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  max-width: 1200px;
-  margin: 0 auto 32px auto;
-  align-items: start;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* FEATURED SECTION - Moderno, glass, animado */
-.featured-section {
   background: #fcf7ea
     radial-gradient(ellipse at 50% 0%, #f3e6d7 0%, #fcf7ea 70%);
-  height: 100vh; /* Cambia min-height por height */
-  /* Quita el padding */
-  text-align: center;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.featured-pretitle {
-  display: inline-block;
-  color: #b28564;
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  margin-bottom: 0.2rem;
-  text-transform: uppercase;
-  background: #f3e6d7;
-  padding: 0.2em 1.2em;
-  border-radius: 1em;
-  opacity: 0.85;
+
+.featured-section > div {
+  margin-top: 48px; /* Ajusta el valor según lo que necesites */
 }
-.featured-section h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #b28564;
-  margin-bottom: 0.3rem;
-  letter-spacing: -1px;
-  position: relative;
-  z-index: 1;
-}
-.featured-divider {
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #b28564 0%, #e7d3c0 100%);
-  border-radius: 2px;
-  margin: 0 auto 1.5rem auto;
-}
-.featured-section p {
-  font-size: 1.15rem;
-  color: #7a6a58;
-  margin-bottom: 2.5rem;
-  font-weight: 400;
-  z-index: 1;
-  position: relative;
-}
-/* único bloque para featured-cards (fusionado) */
+
 .featured-cards {
   display: flex;
   justify-content: center;
@@ -81,200 +32,48 @@
   position: relative;
   z-index: 1;
 }
-.featured-card {
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 1.5rem;
-  border: 1.5px solid #f3e6d7;
-  box-shadow: 0 8px 32px rgba(178, 133, 100, 0.1);
-  width: 370px;
-  min-width: 260px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  transition: box-shadow 0.22s, transform 0.18s, border-color 0.18s;
-  opacity: 0;
-  transform: translateY(40px) scale(0.97);
-}
-.section.in-view .featured-card {
-  opacity: 1;
-  transform: none;
-  animation: featuredFadeIn 0.7s cubic-bezier(0.23, 1.01, 0.32, 1) both;
-}
-.section.in-view .featured-card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.section.in-view .featured-card:nth-child(2) {
-  animation-delay: 0.22s;
-}
-.section.in-view .featured-card:nth-child(3) {
-  animation-delay: 0.34s;
-}
-@keyframes featuredFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px) scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-.featured-card:hover {
-  box-shadow: 0 16px 48px 0 #b2856433, 0 0 0 4px #f3e6d7;
-  transform: translateY(-8px) scale(1.025);
-  border-color: #e7d3c0;
-}
-.featured-card-img {
-  position: relative;
-  height: 180px;
-  background: #e7e2d9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.featured-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-}
-.featured-discount {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: linear-gradient(90deg, #d87c1a 60%, #f3e6d7 100%);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 6px 16px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(160, 90, 28, 0.1);
-  letter-spacing: 0.5px;
-}
-.featured-fav {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(160, 90, 28, 0.1);
-  cursor: pointer;
-  font-size: 18px;
-  transition: background 0.2s, color 0.2s;
+
+.featured-pretitle {
+  display: inline-block;
   color: #b28564;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  background: #f3e6d7;
+  padding: 0.2em 1.2em;
+  border-radius: 1em;
+  opacity: 0.85;
 }
-.featured-fav:hover,
-.featured-fav.active {
-  background: #ffe5c2;
-  color: #d87c1a;
-}
-.featured-card-body {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+
+.featured-section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #b28564;
+  margin-bottom: 0.3rem;
+  letter-spacing: -1px;
   position: relative;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(2px);
+  z-index: 1;
 }
-.featured-level,
-.featured-rating {
-  color: #d87c1a;
-  font-size: 15px;
-  font-weight: 600;
+
+.featured-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #b28564 0%, #e7d3c0 100%);
+  border-radius: 2px;
+  margin: 0 auto 1.5rem auto;
 }
-.featured-rating {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  background: #fff8f2;
-  padding: 4px 12px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(178, 133, 100, 0.07);
-  font-size: 15px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+
+.featured-section p {
+  font-size: 1.15rem;
+  color: #7a6a58;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  z-index: 1;
+  position: relative;
 }
-.featured-rating i {
-  color: #d87c1a;
-  font-size: 1.1em;
-}
-.featured-card-body h3 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #222;
-  margin-top: 10px;
-  text-align: left;
-}
-.featured-chef {
-  font-size: 15px;
-  color: #7a6a53;
-  text-align: left;
-  margin-top: 4px;
-  margin-bottom: 1px;
-}
-.featured-desc {
-  font-size: 15px;
-  color: #555;
-  margin-top: -1.2rem;
-  text-align: left;
-  min-height: 54px;
-}
-.featured-info {
-  display: flex;
-  gap: 24px;
-  font-size: 15px;
-  color: #7a6a53;
-  margin-bottom: 14px;
-  margin-top: 8px;
-}
-.featured-info i {
-  margin-right: 6px;
-}
-.featured-price-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 8px;
-}
-.featured-price {
-  font-size: 22px;
-  font-weight: 700;
-  color: #a05a1c;
-}
-.featured-old-price {
-  font-size: 15px;
-  color: #bbb;
-  text-decoration: line-through;
-  margin-left: 8px;
-}
-.featured-cart {
-  padding: 10px 22px;
-  font-size: 16px;
-  border-radius: 24px;
-  margin-left: 12px;
-  background: #b28564;
-  color: #fff;
-  border: none;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(178, 133, 100, 0.09);
-  transition: background 0.2s, color 0.2s, transform 0.15s;
-  cursor: pointer;
-}
-.featured-cart:hover {
-  background: #a05a1c;
-  color: #fff;
-  transform: scale(1.06);
-}
+
 .featured-all {
   margin-top: 3.5rem;
 }
@@ -294,62 +93,17 @@
   background: #a05a1c;
   color: #fff;
 }
-.featured-section > div {
-  margin-top: 48px; /* Ajusta el valor según lo que necesites */
+
+.featured-level {
+  color: #d87c1a;
+  font-size: 15px;
+  font-weight: 600;
 }
-/* Skeleton Loader para featured cards */
-.featured-card.skeleton {
-  background: #f3e6d7;
-  border: 1.5px solid #f3e6d7;
-  box-shadow: none;
-  min-height: 420px;
-  opacity: 1;
-  transform: none;
-  animation: none;
-}
-.skeleton .skeleton-img,
-.skeleton .skeleton-line,
-.skeleton .skeleton-btn {
-  background: linear-gradient(90deg, #f3e6d7 25%, #fcf7ea 50%, #f3e6d7 75%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.2s infinite linear;
-  border-radius: 8px;
-}
-.skeleton .skeleton-img {
-  height: 180px;
-  margin-bottom: 18px;
-}
-.skeleton .skeleton-line {
-  height: 18px;
-  margin: 10px 0;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.skeleton .skeleton-line.short {
-  width: 40%;
-}
-.skeleton .skeleton-btn {
-  height: 36px;
-  width: 120px;
-  margin: 24px auto 0 auto;
-  border-radius: 24px;
-}
-@keyframes skeleton-loading {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
+
+/* Responsive */
 @media (max-width: 1100px) {
   .featured-cards {
     gap: 24px;
-  }
-  .featured-card {
-    width: 90vw;
-    max-width: 370px;
   }
 }
 @media (max-width: 700px) {
@@ -362,9 +116,5 @@
   }
   .featured-cards {
     gap: 16px;
-  }
-  .featured-card {
-    width: 98vw;
-    max-width: 370px;
   }
 }

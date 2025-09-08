@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/home/bundle.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/coursesCards.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link
       rel="stylesheet"
@@ -129,6 +130,15 @@
 
         <div class="featured-cards" id="featured-cards">
           <!-- Se inyectan 3 cards dinámicamente -->
+          <div class="featured-card">
+            <div class="featured-card-body">
+              <span class="featured-level">Cocina Vegana</span>
+              <span class="featured-rating"
+                ><i class="bx bxs-star"></i> 4.5</span
+              >
+              <!-- ... -->
+            </div>
+          </div>
         </div>
 
         <div class="featured-all">
@@ -140,186 +150,8 @@
     <!-- FOOTER IMPORT -->
     <div id="site-footer"></div>
     <script src="/scripts/footer-loader.js" defer></script>
-
-    <script>
-      // ---------- small helpers ----------
-      function escapeHtml(s) {
-        return String(s || "")
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;");
-      }
-      function formatPrice(n) {
-        if (n == null || n === "") return "$0.00";
-        return "$" + Number(n).toFixed(2);
-      }
-
-      // ---------- fetch 3 random featured courses ----------
-      async function loadFeatured() {
-        // Mostrar 3 skeletons mientras carga
-        const container = document.getElementById("featured-cards");
-        container.innerHTML = "";
-        for (let i = 0; i < 3; i++) {
-          const skeleton = document.createElement("div");
-          skeleton.className = "featured-card skeleton";
-          skeleton.innerHTML = `
-            <div class="skeleton-img"></div>
-            <div class="skeleton-line"></div>
-            <div class="skeleton-line short"></div>
-            <div class="skeleton-line"></div>
-            <div class="skeleton-btn"></div>
-          `;
-          container.appendChild(skeleton);
-        }
-
-        try {
-          const res = await fetch("https://molino32.com/api/get-courses.php");
-          if (!res.ok) throw new Error("Network");
-          const json = await res.json();
-          const list = json.data || [];
-          if (!list.length) {
-            container.innerHTML = "<p>No hay cursos disponibles.</p>";
-            return;
-          }
-          // shuffle & take 3
-          const shuffled = list.sort(() => Math.random() - 0.5).slice(0, 3);
-          container.innerHTML = "";
-          shuffled.forEach((c) => {
-            const img = c.img || c.image || "assets/images/placeholder.jpg";
-            const discount = c.discount
-              ? `<span class="featured-discount">${escapeHtml(
-                  c.discount
-                )}% OFF</span>`
-              : "";
-            const rating = c.rating || "0";
-            const time = c.time ? `${escapeHtml(c.time)} h` : "";
-            const lessons = c.sections ?? c.lessons ?? "";
-            const users = c.users ?? "";
-            const card = document.createElement("div");
-            card.className = "featured-card";
-            card.innerHTML = `
-              <div class="featured-card-img">
-                ${discount}
-                <button class="featured-fav" title="Favorito"><i class="bx bx-heart"></i></button>
-                <img src="${escapeHtml(img)}" alt="${escapeHtml(
-              c.alt || c.name
-            )}" />
-              </div>
-              <div class="featured-card-body">
-                <span class="featured-level">${escapeHtml(
-                  c._difficulty || c.difficulty || ""
-                )}</span>
-                <span class="featured-rating"><i class="bx bxs-star"></i> ${escapeHtml(
-                  rating
-                )}</span>
-                <h3>${escapeHtml(c.name || c.title || "")}</h3>
-                <p class="featured-chef">Por ${escapeHtml(
-                  c.author || c.chef || "Instructor"
-                )}</p>
-                <p class="featured-desc">${escapeHtml(
-                  (c.description || "").slice(0, 140)
-                )}</p>
-                <div class="featured-info">
-                  <span title="Duración"><i class="bx bx-time"></i> ${escapeHtml(
-                    time
-                  )}</span>
-                  <span title="Lecciones"><i class="bx bx-book-open"></i> ${escapeHtml(
-                    lessons
-                  )}</span>
-                  <span title="Alumnos"><i class="bx bx-group"></i> ${escapeHtml(
-                    users
-                  )}</span>
-                </div>
-                <div class="featured-price-row">
-                  <span class="featured-price">${formatPrice(c.price)}</span>
-                  <button class="btn-main featured-cart" onclick="location.href='courses.html'">Ver Curso</button>
-                </div>
-              </div>
-            `;
-            container.appendChild(card);
-          });
-        } catch (e) {
-          console.error(e);
-          document.getElementById("featured-cards").innerHTML =
-            "<p>Error cargando cursos.</p>";
-        }
-      }
-
-      // ---------- auto-scroll with wheel & touch ----------
-      (function () {
-        const sections = Array.from(document.querySelectorAll(".section"));
-        let scrolling = false;
-        let current = 0;
-
-        // intersection observer to set current and add in-view class
-        const io = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((ent) => {
-              if (ent.isIntersecting) {
-                ent.target.classList.add("in-view");
-                current = sections.indexOf(ent.target);
-              }
-            });
-          },
-          { threshold: 0.5 }
-        );
-        sections.forEach((s) => io.observe(s));
-
-        // wheel handler
-        window.addEventListener(
-          "wheel",
-          (e) => {
-            if (scrolling) return;
-            if (Math.abs(e.deltaY) < 10) return;
-            if (e.deltaY > 0 && current < sections.length - 1) {
-              scrolling = true;
-              sections[current + 1].scrollIntoView({ behavior: "smooth" });
-              setTimeout(() => (scrolling = false), 900);
-            } else if (e.deltaY < 0 && current > 0) {
-              scrolling = true;
-              sections[current - 1].scrollIntoView({ behavior: "smooth" });
-              setTimeout(() => (scrolling = false), 900);
-            }
-          },
-          { passive: true }
-        );
-
-        // touch swipe
-        let startY = null;
-        window.addEventListener(
-          "touchstart",
-          (e) => (startY = e.touches[0].clientY),
-          { passive: true }
-        );
-        window.addEventListener(
-          "touchend",
-          (e) => {
-            if (startY == null) return;
-            const endY = e.changedTouches[0].clientY;
-            const diff = startY - endY;
-            if (Math.abs(diff) < 40) return;
-            if (scrolling) return;
-            if (diff > 0 && current < sections.length - 1) {
-              scrolling = true;
-              sections[current + 1].scrollIntoView({ behavior: "smooth" });
-              setTimeout(() => (scrolling = false), 900);
-            }
-            if (diff < 0 && current > 0) {
-              scrolling = true;
-              sections[current - 1].scrollIntoView({ behavior: "smooth" });
-              setTimeout(() => (scrolling = false), 900);
-            }
-            startY = null;
-          },
-          { passive: true }
-        );
-      })();
-
-      // ---------- init ----------
-      document.addEventListener("DOMContentLoaded", () => {
-        loadFeatured();
-      });
-    </script>
+    <script src="/scripts/api/courses-helpers.js" defer></script>
+    <script src="/scripts/api/featuredCourses.js" defer></script>
+    <script src="/scripts/autoScroll.js" defer></script>
   </body>
 </html>
