@@ -38,7 +38,7 @@
       const resolver = document.createElement('a');
       resolver.href = href;
       const hrefPath = resolver.pathname.replace(/\/$/, '') || './index.html';
-      if (hrefPath === path || (path === '/index.html' && hrefPath === './')) {
+      if (hrefPath === path || (path === './index.html' && hrefPath === './')) {
         a.classList.add('active');
       } else {
         a.classList.remove('active');
